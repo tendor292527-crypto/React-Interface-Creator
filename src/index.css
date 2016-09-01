@@ -1,0 +1,115 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.Container {
+  background-color: #dedede;
+  display: flex;
+  height: 95vh;
+  padding: 20px;
+}
+
+.Board, .BoardJSON {
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.Board {
+  background-color: #eee;
+  border: 2px dashed #666;
+  flex: 2;
+}
+
+.BoardJSON {
+  flex: 1;
+}
+
+.MainMenu {
+  background-color: #3A3131;
+  list-style-type: none;
+}
+
+.MainMenuItem {
+  display: inline-block;
+}
+
+.MainMenuItem:hover {
+  background-color: #211C1C;
+}
+
+.MainMenuItem:hover .MainMenuItemText {
+  color: #fff;
+}
+
+.MainMenuItem:not(:first-child) {
+  margin-left: 8px;
+}
+
+.MainMenuItemText {
+  color: #ddd;
+  cursor: move;
+  display: block;
+  height: 5vh;
+  padding: 10px;
+}
+
+.Section {
+  background-color: #eee;
+  margin: 4px;
+  padding: 4px;
+}
+
+.Section:not(:first-child) {
+  margin-top: 20px;
+}
+
+.FormGroup,
+.FormGroup > span {
+  display: block;
+}
+
+.FormGroup:not(:first-child) {
+  margin-top: 20px;
+}
+
+.FormControl {
+  display: block;
+  font-size: 18px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.FormActions {
+  margin-top: 20px;
+}
+
+.FormActions > button {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.FormActions > button:first-child {
+  background-color: #bada55;
+}
+
+.FormActions > button:last-child {
+  background-color: #ffcfcf;
+}
+
+.FormActions > button:not(:first-child) {
+  margin-left: 10px;
+}
