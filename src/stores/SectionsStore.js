@@ -37,5 +37,7 @@ export default {
         edit: true,
       }
     }
+
+    throw new Error(`This section doesn't exist: ${section}`)
   },
 }
