@@ -1,33 +1,33 @@
 import React from 'react'
-import {DropTarget} from 'react-dnd'
+import { DropTarget } from 'react-dnd'
 
 const dropTarget = {
   drop(props, monitor, component) {
     const section = monitor.getItem().name
     props.onDrop(section)
     return {
-      name: 'Board'
+      name: 'Board',
     }
-  }
+  },
 }
 
 @DropTarget('Section', dropTarget, (connect, monitor) => ({
   connectDropTarget: connect.dropTarget(),
   isOver: monitor.isOver(),
-  canDrop: monitor.canDrop()
+  canDrop: monitor.canDrop(),
 }))
 class Board extends React.Component {
   static propTypes = {
     connectDropTarget: React.PropTypes.func.isRequired,
     isOver: React.PropTypes.bool.isRequired,
     canDrop: React.PropTypes.bool.isRequired,
-    children: React.PropTypes.array.isRequired
+    children: React.PropTypes.array.isRequired,
   }
 
   render() {
     const { connectDropTarget } = this.props
     return (connectDropTarget(
-      <div className='Board'>{this.props.children}</div>
+      <div className="Board">{this.props.children}</div>
     ))
   }
 }
