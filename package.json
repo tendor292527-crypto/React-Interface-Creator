@@ -29,7 +29,6 @@
     "eslint-plugin-import": "1.14.0",
     "eslint-plugin-jsx-a11y": "2.2.1",
     "eslint-plugin-react": "6.2.0",
-    "expect": "1.20.2",
     "file-loader": "0.9.0",
     "jsdom": "9.4.5",
     "karma": "1.2.0",
@@ -52,6 +51,7 @@
   },
   "scripts": {
     "start": "webpack-validator webpack.config.dev.js && webpack-dev-server --config ./webpack.config.dev.js --hot --inline --port 3000",
-    "lint": "eslint --ext .js,.jsx ./src"
+    "lint": "eslint --ext .js,.jsx ./src",
+    "test": "karma start"
   }
 }
