@@ -17,54 +17,33 @@ class Constructor extends React.Component {
     this.state = ConstructorStore.getState()
   }
 
-  render() {
-    const sections = this.state.sections.map((section, i) => {
-      return (<Sections type={section.type} key={i}
-        onChange={::this.onChangeSection}
-        onClickSave={::this.onClickSaveSection}
-        onClickDelete={::this.onCickDeleteSection}
-        onDropSection={::this.onDropSection}
-        arrIndex={i} {...section}
-      />)
-    })
-    return (
-      <div>
-        <MainMenu />
-        <div className="Container">
-          <Board onDrop={::this.onDropSectionOnBoard}>{sections}</Board>
-          <pre className="BoardJSON">{JSON.stringify(this.state, null, 2)}</pre>
-        </div>
-      </div>
-    )
-  }
-
-  onChangeSection(arrIndex, e) {
+  onChangeSection = (arrIndex, e) => {
     e.preventDefault()
     const { sections } = this.state
     sections[arrIndex].data[e.target.name] = e.target.value
     this.setState({ sections })
   }
 
-  onClickSaveSection(arrIndex, e) {
+  onClickSaveSection = (arrIndex, e) => {
     e.preventDefault()
     const { sections } = this.state
     sections[arrIndex].edit = !sections[arrIndex].edit
     this.setState({ sections })
   }
 
-  onCickDeleteSection(arrIndex, e) {
+  onCickDeleteSection = (arrIndex, e) => {
     e.preventDefault()
     const sections = this.state.sections.filter((s, i) => i !== arrIndex)
     this.setState({ sections })
   }
 
-  onDropSectionOnBoard(section) {
+  onDropSectionOnBoard = (section) => {
     this.setState({
       sections: [...this.state.sections, { ...SectionsStore.get(section) }],
     })
   }
 
-  onDropSection(dragIndex, hoverIndex) {
+  onDropSection = (dragIndex, hoverIndex) => {
     const { sections } = this.state
     const dragSection = sections[dragIndex]
 
@@ -76,6 +55,28 @@ class Constructor extends React.Component {
         ],
       },
     }))
+  }
+
+  render() {
+    const sections = this.state.sections.map((section, i) => (
+      <Sections
+        arrIndex={i} {...section}
+        onChange={this.onChangeSection}
+        onClickDelete={this.onCickDeleteSection}
+        onClickSave={this.onClickSaveSection}
+        onDropSection={this.onDropSection}
+        type={section.type} key={i}
+      />),
+    )
+    return (
+      <div>
+        <MainMenu />
+        <div className="Container">
+          <Board onDrop={this.onDropSectionOnBoard}>{sections}</Board>
+          <pre className="BoardJSON">{JSON.stringify(this.state, null, 2)}</pre>
+        </div>
+      </div>
+    )
   }
 }
 

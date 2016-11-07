@@ -32,7 +32,7 @@ class MenuItem extends React.Component {
     return connectDragSource(
       <li className="MainMenuItem" style={{ opacity: isDragging ? 0.5 : 1 }}>
         <span className="MainMenuItemText">{name}</span>
-      </li>
+      </li>,
     )
   }
 }

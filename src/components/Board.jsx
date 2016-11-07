@@ -27,7 +27,7 @@ class Board extends React.Component {
   render() {
     const { connectDropTarget } = this.props
     return (connectDropTarget(
-      <div className="Board">{this.props.children}</div>
+      <div className="Board">{this.props.children}</div>,
     ))
   }
 }
