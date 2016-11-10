@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Section1 = (props, context) => {
+const Section1 = (props/* , context*/) => {
   const {
     arrIndex, data, edit, onChange,
     onClickSave, onClickDelete,
@@ -11,7 +11,7 @@ const Section1 = (props, context) => {
       <div>
         <h1>{data.title}</h1>
         <h2>{data.subTitle}</h2>
-        <img src={data.linkImage} />
+        <img src={data.linkImage} role="presentation" />
         <div className="FormActions">
           <button type="button" onClick={onClickSave.bind(null, arrIndex)}>Edit</button>
         </div>
@@ -43,7 +43,7 @@ const Section1 = (props, context) => {
 
 Section1.propTypes = {
   arrIndex: React.PropTypes.number,
-  data: React.PropTypes.object,
+  data: React.PropTypes.shape({}),
   edit: React.PropTypes.bool,
   onChange: React.PropTypes.func,
   onClickSave: React.PropTypes.func,

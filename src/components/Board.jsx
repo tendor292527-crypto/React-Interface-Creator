@@ -2,7 +2,7 @@ import React from 'react'
 import { DropTarget } from 'react-dnd'
 
 const dropTarget = {
-  drop(props, monitor, component) {
+  drop(props, monitor/* , component*/) {
     const section = monitor.getItem().name
     props.onDrop(section)
     return {
@@ -19,9 +19,9 @@ const dropTarget = {
 class Board extends React.Component {
   static propTypes = {
     connectDropTarget: React.PropTypes.func.isRequired,
-    isOver: React.PropTypes.bool.isRequired,
-    canDrop: React.PropTypes.bool.isRequired,
-    children: React.PropTypes.array.isRequired,
+    // isOver: React.PropTypes.bool.isRequired,
+    // canDrop: React.PropTypes.bool.isRequired,
+    children: React.PropTypes.arrayOf(React.PropTypes.element).isRequired,
   }
 
   render() {
