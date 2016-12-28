@@ -21,17 +21,17 @@ const Section1 = (props/* , context*/) => {
 
   return (
     <div>
-      <label className="FormGroup">
+      <label className="FormGroup" htmlFor="Sec1-title">
         <span>Title</span>
-        <input className="FormControl" name="title" type="text" value={data.title} onChange={onChange.bind(null, arrIndex)} />
+        <input className="FormControl" name="Sec1-title" id="Sec1-title" type="text" value={data.title} onChange={onChange.bind(null, arrIndex)} />
       </label>
-      <label className="FormGroup">
+      <label className="FormGroup" htmlFor="Sec1-subTitle">
         <span>Sub Title</span>
-        <input className="FormControl" name="subTitle" type="text" value={data.subTitle} onChange={onChange.bind(null, arrIndex)} />
+        <input className="FormControl" name="Sec1-subTitle" id="Sec1-subTitle" type="text" value={data.subTitle} onChange={onChange.bind(null, arrIndex)} />
       </label>
-      <label className="FormGroup">
+      <label className="FormGroup" htmlFor="Sec1-linkImage">
         <span>Link Image</span>
-        <input className="FormControl" name="linkImage" type="text" value={data.linkImage} onChange={onChange.bind(null, arrIndex)} />
+        <input className="FormControl" name="Sec1-linkImage" id="Sec1-linkImage" type="text" value={data.linkImage} onChange={onChange.bind(null, arrIndex)} />
       </label>
       <div className="FormActions">
         <button type="button" onClick={onClickSave.bind(null, arrIndex)}>Save</button>
