@@ -72,7 +72,7 @@ const Section3 = (props) => {
 
 Section3.propTypes = {
   arrIndex: React.PropTypes.number,
-  data: React.PropTypes.object,
+  data: React.PropTypes.shape({}),
   edit: React.PropTypes.bool,
   onChange: React.PropTypes.func,
   onClickSave: React.PropTypes.func,
