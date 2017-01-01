@@ -61,7 +61,7 @@ const sectionTarget = {
   },
 }
 
-@DropTarget('SectionsOnBoard', sectionTarget, (connect) => ({
+@DropTarget('SectionsOnBoard', sectionTarget, connect => ({
   connectDropTarget: connect.dropTarget(),
 }))
 @DragSource('SectionsOnBoard', sectionSource, (connect, monitor) => ({
@@ -96,7 +96,7 @@ class Sections extends React.Component {
     return connectDragSource(connectDropTarget(
       <div className="Section">
         {section}
-      </div>
+      </div>,
     ))
   }
 }
