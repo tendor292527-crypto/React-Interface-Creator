@@ -20,7 +20,7 @@ const Section2 = (props, context) => {
   }
 
   const buttonTargetOptions = (
-    <select className="FormControl" name="Sec2-buttonTarget" id="Sec2-buttonTarget" value={data.buttonTarget} onChange={onChange.bind(null, arrIndex)}>
+    <select className="FormControl" name="buttonTarget" id="Sec2-buttonTarget" value={data.buttonTarget} onChange={onChange.bind(null, arrIndex)}>
       <option value="_self">Self</option>
       <option value="_blank">Blank</option>
       <option value="_parent">Parent</option>
@@ -32,19 +32,19 @@ const Section2 = (props, context) => {
     <div>
       <label className="FormGroup" htmlFor="Sec2-title">
         <span>Title</span>
-        <input className="FormControl" name="Sec2-title" id="Sec2-title" type="text" value={data.title} onChange={onChange.bind(null, arrIndex)} />
+        <input className="FormControl" name="title" id="Sec2-title" type="text" value={data.title} onChange={onChange.bind(null, arrIndex)} />
       </label>
       <label className="FormGroup" htmlFor="Sec2-subTitle">
         <span>Sub Title</span>
-        <input className="FormControl" name="Sec2-subTitle" id="Sec2-subTitle" type="text" value={data.subTitle} onChange={onChange.bind(null, arrIndex)} />
+        <input className="FormControl" name="subTitle" id="Sec2-subTitle" type="text" value={data.subTitle} onChange={onChange.bind(null, arrIndex)} />
       </label>
       <label className="FormGroup" htmlFor="Sec2-backgroundColor">
         <span>Background Color</span>
-        <input className="FormControl" name="Sec2-backgroundColor" id="Sec2-backgroundColor" type="text" value={data.backgroundColor} onChange={onChange.bind(null, arrIndex)} />
+        <input className="FormControl" name="backgroundColor" id="Sec2-backgroundColor" type="text" value={data.backgroundColor} onChange={onChange.bind(null, arrIndex)} />
       </label>
       <label className="FormGroup" htmlFor="Sec2-buttonLink">
         <span>Button - Link</span>
-        <input className="FormControl" name="Sec2-buttonLink" id="Sec2-buttonLink" type="text" value={data.buttonLink} onChange={onChange.bind(null, arrIndex)} />
+        <input className="FormControl" name="buttonLink" id="Sec2-buttonLink" type="text" value={data.buttonLink} onChange={onChange.bind(null, arrIndex)} />
       </label>
       <label className="FormGroup" htmlFor="Sec2-buttonTarget">
         <span>Buton - Target</span>
@@ -52,7 +52,7 @@ const Section2 = (props, context) => {
       </label>
       <label className="FormGroup" htmlFor="Sec2-buttonLabel">
         <span>Buton - Label</span>
-        <input className="FormControl" name="Sec2-buttonLabel" id="Sec2-buttonLabel" type="text" value={data.buttonLabel} onChange={onChange.bind(null, arrIndex)} />
+        <input className="FormControl" name="buttonLabel" id="Sec2-buttonLabel" type="text" value={data.buttonLabel} onChange={onChange.bind(null, arrIndex)} />
       </label>
       <div className="FormActions">
         <button type="button" onClick={onClickSave.bind(null, arrIndex)}>Save</button>
