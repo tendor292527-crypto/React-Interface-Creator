@@ -14,7 +14,7 @@ const Section3 = (props) => {
         <img role="presentation" src={data.linkImage2} />
         <img role="presentation" src={data.linkImage3} />
         <div className="FormActions">
-          <button type="button" onClick={onClickSave.bind(null, arrIndex)}>Edit</button>
+          <button type="button" onClick={e => onClickSave(arrIndex, e)}>Edit</button>
         </div>
       </div>
     )
@@ -29,7 +29,7 @@ const Section3 = (props) => {
           name="createdAt"
           type="text"
           value={data.createdAt}
-          onChange={onChange.bind(null, arrIndex)}
+          onChange={e => onChange(arrIndex, e)}
         />
       </label>
       <label htmlFor="f2" className="FormGroup">
@@ -39,7 +39,7 @@ const Section3 = (props) => {
           name="linkImage1"
           type="text"
           value={data.linkImage1}
-          onChange={onChange.bind(null, arrIndex)}
+          onChange={e => onChange(arrIndex, e)}
         />
       </label>
       <label htmlFor="f3" className="FormGroup">
@@ -49,7 +49,7 @@ const Section3 = (props) => {
           name="linkImage2"
           type="text"
           value={data.linkImage2}
-          onChange={onChange.bind(null, arrIndex)}
+          onChange={e => onChange(arrIndex, e)}
         />
       </label>
       <label htmlFor="f4" className="FormGroup">
@@ -59,12 +59,12 @@ const Section3 = (props) => {
           name="linkImage3"
           type="text"
           value={data.linkImage3}
-          onChange={onChange.bind(null, arrIndex)}
+          onChange={e => onChange(arrIndex, e)}
         />
       </label>
       <div className="FormActions">
-        <button type="button" onClick={onClickSave.bind(null, arrIndex)}>Save</button>
-        <button type="button" onClick={onClickDelete.bind(null, arrIndex)}>Delete</button>
+        <button type="button" onClick={e => onClickSave(arrIndex, e)}>Save</button>
+        <button type="button" onClick={e => onClickDelete(arrIndex, e)}>Delete</button>
       </div>
     </div>
   )
