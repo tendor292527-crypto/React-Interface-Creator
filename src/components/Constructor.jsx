@@ -70,7 +70,7 @@ class Constructor extends React.Component {
     )
     return (
       <div>
-        <MainMenu />
+        <MainMenu onClickMenuItem={this.onDropSectionOnBoard} />
         <div className="Container">
           <Board onDrop={this.onDropSectionOnBoard}>{sections}</Board>
           <pre className="BoardJSON">{JSON.stringify(this.state, null, 2)}</pre>

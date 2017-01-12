@@ -58,11 +58,13 @@ img {
 }
 
 .MainMenuItemText {
+  background-color: transparent;
+  border: 0;
   color: #ddd;
   cursor: move;
   display: block;
-  height: 5vh;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 0.625rem;
 }
 
 .Section {
