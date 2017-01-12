@@ -3,7 +3,7 @@ const nodePath = require('path')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const webpack = require('webpack')
 
-const path = (dir) => nodePath.resolve(dir)
+const path = dir => nodePath.resolve(dir)
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -13,7 +13,7 @@ module.exports = {
     './src/index.jsx',
   ],
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path('dist'),
     pathinfo: true,
     publicPath: '/',
@@ -21,6 +21,10 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"development"',
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource),
     }),
     new ProgressBarPlugin(),
     new HtmlWebpackPlugin({
