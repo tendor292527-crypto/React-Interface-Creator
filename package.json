@@ -42,7 +42,7 @@
     "promise": "7.1.1",
     "react-addons-test-utils": "15.4.2",
     "react-dnd": "2.1.4",
-    "source-map-support": "0.4.8",
+    "source-map-support": "0.4.9",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack-dev-server": "1.16.2",
