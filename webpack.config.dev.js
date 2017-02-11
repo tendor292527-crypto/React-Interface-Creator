@@ -33,23 +33,33 @@ module.exports = {
     }),
   ],
   module: {
-    loaders: [{
+    rules: [{
       test: /\.(js|jsx)$/,
-      loader: 'babel',
+      use: 'babel-loader',
       include: path('src'),
     }, {
       test: /\.css$/,
-      loader: 'style!css',
+      use: [{
+        loader: 'style-loader',
+      }, {
+        loader: 'css-loader',
+      }],
       include: path('src'),
     }, {
       test: /\.(ico|jpg|png)$/,
-      loader: 'url-loader?limit=10000&mimetype=application/font-woff',
+      use: [{
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          mimetype: 'application/font-woff',
+        },
+      }],
     }, {
       test: /\.(ttf|eot|svg)$/,
-      loader: 'file',
+      use: 'file-loader',
     }],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
 }
