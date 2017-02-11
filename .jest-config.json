@@ -1,0 +1,17 @@
+{
+  "bail": true,
+  "verbose": true,
+  "testPathDirs": [
+    "<rootDir>/src"
+  ],
+  "testRegex": "\\-(test|spec)\\.(js|jsx)$",
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!**/node_modules/**"
+  ],
+  "setupFiles": [
+    "<rootDir>/.polyfills.js"
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/.jest-setup.js",
+  "snapshotSerializers": ["enzyme-to-json/serializer"]
+}
