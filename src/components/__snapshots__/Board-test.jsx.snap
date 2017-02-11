@@ -1,31 +1,28 @@
 exports[`<Board /> renders correctly 1`] = `
-<Constructor>
-  <DropTarget(Board) />
-</Constructor>
+<div
+  className="Board" />
 `;
 
 exports[`<Board /> renders with multiple child correctly 1`] = `
-<Constructor>
-  <DropTarget(Board)>
-    <span>
-      Fake
-    </span>
-    <span>
-      Fake
-    </span>
-    <span>
-      Fake
-    </span>
-  </DropTarget(Board)>
-</Constructor>
+<div
+  className="Board">
+  <span>
+    Fake
+  </span>
+  <span>
+    Fake
+  </span>
+  <span>
+    Fake
+  </span>
+</div>
 `;
 
 exports[`<Board /> renders with one child correctly 1`] = `
-<Constructor>
-  <DropTarget(Board)>
-    <span>
-      Fake
-    </span>
-  </DropTarget(Board)>
-</Constructor>
+<div
+  className="Board">
+  <span>
+    Fake
+  </span>
+</div>
 `;
