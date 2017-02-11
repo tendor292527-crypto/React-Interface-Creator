@@ -15,6 +15,7 @@
     "react-dnd": "2.2.3",
     "react-dnd-html5-backend": "2.2.3",
     "react-dom": "15.4.2",
+    "shortid": "2.2.6",
     "webpack": "2.2.1",
     "webpack-node-externals": "1.5.4"
   },

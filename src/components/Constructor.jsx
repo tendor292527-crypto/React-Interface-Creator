@@ -1,4 +1,5 @@
 import React from 'react'
+import shortid from 'shortid'
 import update from 'react/lib/update'
 import { DragDropContext } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
@@ -60,12 +61,14 @@ class Constructor extends React.Component {
   render() {
     const sections = this.state.sections.map((section, i) => (
       <Sections
-        arrIndex={i} {...section}
+        arrIndex={i}
+        key={shortid.generate()}
         onChange={this.onChangeSection}
         onClickDelete={this.onCickDeleteSection}
         onClickSave={this.onClickSaveSection}
         onDropSection={this.onDropSection}
-        type={section.type} key={i}
+        type={section.type}
+        {...section}
       />),
     )
     return (
