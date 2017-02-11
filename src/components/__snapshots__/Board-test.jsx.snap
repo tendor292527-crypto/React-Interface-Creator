@@ -1,0 +1,31 @@
+exports[`<Board /> renders correctly 1`] = `
+<Constructor>
+  <DropTarget(Board) />
+</Constructor>
+`;
+
+exports[`<Board /> renders with multiple child correctly 1`] = `
+<Constructor>
+  <DropTarget(Board)>
+    <span>
+      Fake
+    </span>
+    <span>
+      Fake
+    </span>
+    <span>
+      Fake
+    </span>
+  </DropTarget(Board)>
+</Constructor>
+`;
+
+exports[`<Board /> renders with one child correctly 1`] = `
+<Constructor>
+  <DropTarget(Board)>
+    <span>
+      Fake
+    </span>
+  </DropTarget(Board)>
+</Constructor>
+`;
