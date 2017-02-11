@@ -1,0 +1,14 @@
+exports[`<MainMenu /> renders correctly 1`] = `
+<ul
+  className="MainMenu">
+  <DragSource(MenuItem)
+    name="Section 1"
+    onClickMenuItem={[Function]} />
+  <DragSource(MenuItem)
+    name="Section 2"
+    onClickMenuItem={[Function]} />
+  <DragSource(MenuItem)
+    name="Section 3"
+    onClickMenuItem={[Function]} />
+</ul>
+`;
