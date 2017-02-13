@@ -34,7 +34,7 @@
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.9.0",
     "file-loader": "0.10.0",
-    "jsdom": "9.10.0",
+    "jsdom": "9.11.0",
     "mocha": "3.2.0",
     "object-assign": "4.1.1",
     "promise": "7.1.1",
