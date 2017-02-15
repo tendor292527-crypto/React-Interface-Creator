@@ -10,9 +10,9 @@ const Section3 = (props) => {
     return (
       <div>
         <h1>{data.createdAt}</h1>
-        <img role="presentation" src={data.linkImage1} />
-        <img role="presentation" src={data.linkImage2} />
-        <img role="presentation" src={data.linkImage3} />
+        <img alt="" src={data.linkImage1} />
+        <img alt="" src={data.linkImage2} />
+        <img alt="" src={data.linkImage3} />
         <div className="FormActions">
           <button type="button" onClick={e => onClickSave(arrIndex, e)}>Edit</button>
         </div>
@@ -71,12 +71,12 @@ const Section3 = (props) => {
 }
 
 Section3.propTypes = {
-  arrIndex: React.PropTypes.number,
-  data: React.PropTypes.shape({}),
-  edit: React.PropTypes.bool,
-  onChange: React.PropTypes.func,
-  onClickSave: React.PropTypes.func,
-  onClickDelete: React.PropTypes.func,
+  arrIndex: React.PropTypes.number.isRequired,
+  data: React.PropTypes.shape({}).isRequired,
+  edit: React.PropTypes.bool.isRequired,
+  onChange: React.PropTypes.func.isRequired,
+  onClickDelete: React.PropTypes.func.isRequired,
+  onClickSave: React.PropTypes.func.isRequired,
 }
 
 export default Section3
