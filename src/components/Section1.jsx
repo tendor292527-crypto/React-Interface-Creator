@@ -11,7 +11,7 @@ const Section1 = (props) => {
       <div>
         <h1>{data.title}</h1>
         <h2>{data.subTitle}</h2>
-        <img src={data.linkImage} role="presentation" />
+        <img src={data.linkImage} alt="" />
         <div className="FormActions">
           <button type="button" onClick={e => onClickSave(arrIndex, e)}>Edit</button>
         </div>
@@ -42,12 +42,12 @@ const Section1 = (props) => {
 }
 
 Section1.propTypes = {
-  arrIndex: React.PropTypes.number,
-  data: React.PropTypes.shape({}),
-  edit: React.PropTypes.bool,
-  onChange: React.PropTypes.func,
-  onClickSave: React.PropTypes.func,
-  onClickDelete: React.PropTypes.func,
+  arrIndex: React.PropTypes.number.isRequired,
+  data: React.PropTypes.shape({}).isRequired,
+  edit: React.PropTypes.bool.isRequired,
+  onChange: React.PropTypes.func.isRequired,
+  onClickSave: React.PropTypes.func.isRequired,
+  onClickDelete: React.PropTypes.func.isRequired,
 }
 
 export default Section1
