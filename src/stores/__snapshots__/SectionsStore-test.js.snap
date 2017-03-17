@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionsStore retursn Section 1 correctly 1`] = `
+Object {
+  "data": Object {
+    "linkImage": "",
+    "subTitle": "",
+    "title": "",
+  },
+  "edit": true,
+  "type": "1",
+}
+`;
+
+exports[`SectionsStore retursn Section 2 correctly 1`] = `
+Object {
+  "data": Object {
+    "backgroundColor": "",
+    "buttonLabel": "",
+    "buttonLink": "",
+    "buttonTarget": "_self",
+    "subTitle": "",
+    "title": "",
+  },
+  "edit": true,
+  "type": "2",
+}
+`;
+
+exports[`SectionsStore retursn Section 3 correctly 1`] = `
+Object {
+  "data": Object {
+    "createdAt": "",
+    "linkImage1": "",
+    "linkImage2": "",
+    "linkImage3": "",
+  },
+  "edit": true,
+  "type": "3",
+}
+`;
+
+exports[`SectionsStore retursn correct error 1`] = `[Error: This section doesn't exist: section4]`;

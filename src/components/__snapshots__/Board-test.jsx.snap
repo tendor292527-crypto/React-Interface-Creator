@@ -1,11 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<Board /> renders correctly 1`] = `
 <div
-  className="Board" />
+  className="Board"
+/>
 `;
 
 exports[`<Board /> renders with multiple child correctly 1`] = `
 <div
-  className="Board">
+  className="Board"
+>
   <span>
     Fake
   </span>
@@ -20,7 +24,8 @@ exports[`<Board /> renders with multiple child correctly 1`] = `
 
 exports[`<Board /> renders with one child correctly 1`] = `
 <div
-  className="Board">
+  className="Board"
+>
   <span>
     Fake
   </span>

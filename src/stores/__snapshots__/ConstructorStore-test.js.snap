@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConstructorStore retursn Section 1 correctly 1`] = `
+Object {
+  "sections": Array [],
+}
+`;
