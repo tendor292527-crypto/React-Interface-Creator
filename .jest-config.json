@@ -1,7 +1,7 @@
 {
   "bail": true,
   "verbose": true,
-  "testPathDirs": [
+  "roots": [
     "<rootDir>/src"
   ],
   "testRegex": "\\-(test|spec)\\.(js|jsx)$",
