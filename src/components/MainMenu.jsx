@@ -13,6 +13,7 @@ const menuItemSource = {
     const item = monitor.getItem()
     const dropResult = monitor.getDropResult()
     if (dropResult) {
+      // eslint-disable-next-line no-console
       console.log(`You dropped ${item.name} into ${dropResult.name}!`)
     }
   },
