@@ -1,5 +1,6 @@
 import React from 'react'
 import update from 'react/lib/update'
+import shortid from 'shortid'
 import { DragDropContext } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
 
@@ -39,7 +40,13 @@ class Constructor extends React.Component {
 
   onDropSectionOnBoard = (section) => {
     this.setState({
-      sections: [...this.state.sections, { ...SectionsStore.get(section) }],
+      sections: [
+        ...this.state.sections,
+        {
+          id: shortid.generate(),
+          ...SectionsStore.get(section),
+        },
+      ],
     })
   }
 
