@@ -1,8 +1,11 @@
+import shortid from 'shortid'
+
 export default {
   get(section) {
     if (section === 'section1') {
       return {
         type: '1',
+        id: shortid.generate(),
         data: {
           title: '',
           subTitle: '',
@@ -14,6 +17,7 @@ export default {
     if (section === 'section2') {
       return {
         type: '2',
+        id: shortid.generate(),
         data: {
           title: '',
           subTitle: '',
@@ -28,6 +32,7 @@ export default {
     if (section === 'section3') {
       return {
         type: '3',
+        id: shortid.generate(),
         data: {
           createdAt: '',
           linkImage1: '',
